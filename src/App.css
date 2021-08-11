@@ -1,7 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
+  border: 5px violet solid;
+  min-height: 100vh;
+  transition: 0.2s;
+}
+.del {
+  margin-left: 16px;
 }
 
+.dark {
+  background-color: #292929;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 32px;
+}
+h2 {
+  margin-top: 16px;
+}
+p {
+  font-size: 24px;
+}
+kbd {
+  margin-top: auto;
+}
+.margin {
+  margin-bottom: 15vh;
+}
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px blue solid;
+  padding: 32px;
+}
+.flex {
+  display: flex;
+}
+.profile {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px red solid;
+  padding: 32px;
+}
+.todosView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px green solid;
+  padding: 32px;
+  width: 50%;
+}
+.todoCreator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px orange solid;
+  padding: 32px;
+  width: 50%;
+}
+.todoCreator textarea {
+  margin-top: 16px;
+}
+.form * {
+  max-width: "320px";
+}
+.form input {
+  margin-bottom: 8px;
+}
+
+button {
+  margin: 8px 0 24px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
