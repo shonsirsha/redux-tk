@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
-import { deleteTodo, finishTodo } from "../slices/todo";
+import { deleteTodo, toggleTodoStatus } from "../slices/todo";
 const TodosView: FC = () => {
   const todos = useSelector((state: RootState) => state.todo.todos);
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const TodosView: FC = () => {
         <div className="flex" key={todo.id}>
           <p
             className={`${todo.completed && `done`}`}
-            onClick={() => dispatch(finishTodo(todo.id))}
+            onClick={() => dispatch(toggleTodoStatus(todo.id))}
           >
             {ix + 1}. {todo.content}
           </p>
