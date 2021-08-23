@@ -1,8 +1,6 @@
 import TodosView from "./components/TodosView";
 import TodoCreator from "./components/TodoCreator";
 import "./App.css";
-import { useSelector } from "react-redux";
-import { RootState } from "./store";
 
 function App() {
   return (
