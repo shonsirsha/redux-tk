@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Todo, Todos } from "../types";
+import { Todos } from "../types";
 const initialState: Todos = {
   todos: [],
 };
