@@ -11,6 +11,7 @@ export type UserDetailObj = {
 export type Todo = {
   id: number;
   content: string;
+  completed: boolean;
 };
 export type Todos = {
   todos: Todo[];

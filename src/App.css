@@ -12,9 +12,8 @@
   margin-left: 16px;
 }
 
-.dark {
-  background-color: #292929;
-  color: #fff;
+.done {
+  text-decoration: line-through;
 }
 
 h1 {
@@ -29,29 +28,11 @@ p {
 kbd {
   margin-top: auto;
 }
-.margin {
-  margin-bottom: 15vh;
-}
-.form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 5px blue solid;
-  padding: 32px;
-}
+
 .flex {
   display: flex;
 }
-.profile {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 5px red solid;
-  padding: 32px;
-}
+
 .todosView {
   display: flex;
   flex-direction: column;
@@ -70,12 +51,6 @@ kbd {
 }
 .todoCreator textarea {
   margin-top: 16px;
-}
-.form * {
-  max-width: "320px";
-}
-.form input {
-  margin-bottom: 8px;
 }
 
 button {

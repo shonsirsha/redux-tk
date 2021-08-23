@@ -1,32 +1,27 @@
-import React, { FC, useState } from "react";
+import { FC, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../slices/todo";
-import { Todo } from "../types";
 const TodoCreator: FC = () => {
   const dispatch = useDispatch();
-  const [todo, setTodo] = useState<Todo>({ id: 0, content: "" });
-  const handleCreateTodo = (todo: Todo) => {
-    if (todo.content !== "") dispatch(addTodo(todo));
+  const handleCreateTodo = (todoText: string) => {
+    if (todoText) dispatch(addTodo(todoText));
+    textAreaRef.current!.value = "";
   };
+  const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
   return (
     <div className="todoCreator">
       <h1>Create a new todo</h1>
-      <textarea
-        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
-          setTodo({ id: Date.now(), content: e.target.value });
-        }}
-        placeholder="Todo detail..."
-        value={todo.content}
-      />
+      <textarea ref={textAreaRef} placeholder="Todo detail..." />
       <button
-        onClick={() => {
-          handleCreateTodo(todo);
-          setTodo({ id: 0, content: "" });
-        }}
+        onClick={() =>
+          handleCreateTodo(
+            textAreaRef.current ? textAreaRef.current?.value : ""
+          )
+        }
       >
         Create todo
       </button>
-      <kbd> Component 4 (TodosCreator.tsx)</kbd>
+      <kbd>Component 1 (TodoCreator.tsx)</kbd>
     </div>
   );
 };
