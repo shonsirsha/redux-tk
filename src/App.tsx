@@ -10,8 +10,8 @@ function App() {
         <TodoCreator />
       </div>
       <p>
-        States (todos, user detail, & theme) are shared & managed globally
-        between: Parent component, Component 1, 2, 3, & 4 using redux-toolkit.
+        State (todos) is shared & managed globally between: Component 1 & 2
+        using redux-toolkit.
       </p>
       <kbd>Parent Component (App.tsx)</kbd>
     </div>
