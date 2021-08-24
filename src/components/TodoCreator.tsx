@@ -4,8 +4,10 @@ import { addTodo } from "../slices/todo";
 const TodoCreator: FC = () => {
   const dispatch = useDispatch();
   const handleCreateTodo = (todoText: string) => {
-    if (todoText) dispatch(addTodo(todoText));
-    textAreaRef.current!.value = "";
+    if (textAreaRef.current && textAreaRef.current.value) {
+      dispatch(addTodo(todoText));
+      textAreaRef.current.value = "";
+    }
   };
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
   return (
